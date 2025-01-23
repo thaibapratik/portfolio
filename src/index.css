@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+}
+
+* {
+	padding: 0px;
+	margin: 0px;
+	transition: all 0.3s ease-in;
+	scroll-behavior: smooth;
+	/* scroll-behavior: smooth; */
+}
+
+.nav-links {
+	@apply p-3 rounded-full max-lg:text-sm max-lg:p-2;
+	letter-spacing: 0.5px;
+}
+
+.img-shadow {
+	box-shadow: 7px 18px 42px 3px rgba(0, 0, 0, 0.75);
+	-webkit-box-shadow: 7px 18px 42px 3px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 7px 18px 42px 3px rgba(0, 0, 0, 0.75);
+}
+
+.heading {
+	@apply text-3xl text-white text-center tracking-widest font-light pt-10 uppercase;
+}
