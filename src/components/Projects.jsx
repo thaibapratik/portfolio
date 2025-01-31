@@ -1,8 +1,12 @@
 import ProjectCard from "./ProjectCard";
 import { FaReact as ReactIcon } from "react-icons/fa";
+import { SiExpress as ExpressIcon } from "react-icons/si";
+import { FaNodeJs as NodeIcon } from "react-icons/fa";
 import { RiTailwindCssFill as TailwindIcon } from "react-icons/ri";
+import { SiMongodb as MongoDbIcon } from "react-icons/si";
 import { SiNextui as NextUIIcon } from "react-icons/si";
-import screenshot1 from "../assets/screenshot1.png";
+import organizeme from "../assets/OrganizeMe.png";
+import portfolio from "../assets/portfolio.png";
 
 const Projects = () => {
 	const projects = [
@@ -13,28 +17,19 @@ const Projects = () => {
 				{ name: "Tailwind", icon: TailwindIcon },
 				{ name: "NextUI", icon: NextUIIcon },
 			],
-			imageURL: screenshot1,
-			siteURL: "https://thaibapratik.github.io/portfoliowebsite",
+			imageURL: portfolio,
+			siteURL: "https://thaibapratik.github.io/portfolio",
 		},
 		{
-			title: "My portfolio",
+			title: "OrganizeMe",
 			languages: [
 				{ name: "React", icon: ReactIcon },
-				{ name: "Tailwind", icon: TailwindIcon },
-				{ name: "NextUI", icon: NextUIIcon },
+				{ name: "Node", icon: NodeIcon },
+				{ name: "Express", icon: ExpressIcon },
+				{ name: "MongoDb", icon: MongoDbIcon },
 			],
-			imageURL: screenshot1,
-			siteURL: "https://thaibapratik.github.io/portfoliowebsite",
-		},
-		{
-			title: "My portfolio",
-			languages: [
-				{ name: "React", icon: ReactIcon },
-				{ name: "Tailwind", icon: TailwindIcon },
-				{ name: "NextUI", icon: NextUIIcon },
-			],
-			imageURL: screenshot1,
-			siteURL: "https://thaibapratik.github.io/portfoliowebsite",
+			imageURL: organizeme,
+			siteURL: "https://organize-me-thaibapratik.netlify.app",
 		},
 	];
 

@@ -11,7 +11,6 @@ This portfolio website features:
 -   **Projects Section:** Showcases a list of my projects with titles, used technologies (displayed as chips), images, and links to live sites. (Note: Currently all projects are identical placeholders.)
 -   **Contact Section:** Provides my email address and links to my GitHub and LinkedIn profiles. Includes a button to send an email directly.
 -   **Responsive Design:** The website is designed to be responsive and adapt to different screen sizes.
--   **Dark Mode:** The website is in dark mode.
 
 ## Technology Stack
 
