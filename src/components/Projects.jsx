@@ -7,6 +7,7 @@ import { SiMongodb as MongoDbIcon } from "react-icons/si";
 import { SiNextui as NextUIIcon } from "react-icons/si";
 import organizeme from "../assets/OrganizeMe.png";
 import portfolio from "../assets/portfolio.png";
+import quicktalk from "../assets/Quick-talk.png";
 
 const Projects = () => {
 	const projects = [
@@ -30,6 +31,17 @@ const Projects = () => {
 			],
 			imageURL: organizeme,
 			siteURL: "https://organize-me-thaibapratik.netlify.app",
+		},
+		{
+			title: "QuickTalk",
+			languages: [
+				{ name: "React", icon: ReactIcon },
+				{ name: "Node", icon: NodeIcon },
+				{ name: "Express", icon: ExpressIcon },
+				{ name: "MongoDb", icon: MongoDbIcon },
+			],
+			imageURL: quicktalk,
+			siteURL: "https://github.com/thaibapratik/quick-talk",
 		},
 	];
 
