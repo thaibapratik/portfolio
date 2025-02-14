@@ -2,13 +2,19 @@ import { useState } from "react";
 import "../mesh.css";
 import { FiMenu } from "react-icons/fi";
 import { RxCross2 } from "react-icons/rx";
+import { motion } from "framer-motion";
 
 const NavBar = () => {
 	const navLinks = ["home", "experience", "project", "contact"];
 	const [menu, setMenu] = useState(true);
 
 	return (
-		<nav className="absolute z-20 top-0 left-0">
+		<motion.nav
+			className="absolute z-20 top-0 left-0"
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 0.5 }}
+		>
 			{/* Desktop Navbar */}
 			<div className="hidden sm:flex justify-center items-center font-semibold fixed top-0 left-0 w-full z-20 ">
 				<div className="p-2 bg-transparent border border-black/50 my-5 rounded-full text-white flex gap-10 capitalize backdrop-blur-md">
@@ -53,7 +59,7 @@ const NavBar = () => {
 					</div>
 				)}
 			</div>
-		</nav>
+		</motion.nav>
 	);
 };
 

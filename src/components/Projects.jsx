@@ -41,7 +41,7 @@ const Projects = () => {
 				{ name: "MongoDb", icon: MongoDbIcon },
 			],
 			imageURL: quicktalk,
-			siteURL: "https://github.com/thaibapratik/quick-talk",
+			siteURL: "https://quicktalk-thaibapratik.netlify.app",
 		},
 	];
 

@@ -7,10 +7,16 @@ import { MdOutlineCloudDownload } from "react-icons/md";
 import resume from "../assets/Resume.pdf";
 import { FaGithub as Github } from "react-icons/fa";
 import linkedin from "../assets/linkedin.png";
+import { motion } from "framer-motion";
 
 const Introduction = () => {
 	return (
-		<section className="flex items-center gap-40 h-full max-sm:flex-col-reverse max-sm:gap-5 max-sm:justify-center">
+		<motion.section
+			className="flex items-center gap-40 h-full max-sm:flex-col-reverse max-sm:gap-5 max-sm:justify-center"
+			initial={{ opacity: 0 }}
+			animate={{ opacity: 1 }}
+			transition={{ duration: 0.5, delay: 0.3 }}
+		>
 			<div className="mb-14 z-10">
 				<h1 className="font-bold lg:text-4xl text-2xl">
 					Hello, my name is <br />
@@ -80,7 +86,7 @@ const Introduction = () => {
 					className="object-cover h-full w-full rounded-[50px] img-shadow max-sm:rounded-full"
 				/>
 			</div>
-		</section>
+		</motion.section>
 	);
 };
 export default Introduction;

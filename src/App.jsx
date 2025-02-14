@@ -3,11 +3,60 @@ import NavBar from "./components/NavBar";
 import Experience from "./components/Experience";
 import purpleBall from "./assets/purpleball.png";
 import greyBall from "./assets/greyball.png";
-import ProjectCard from "./components/ProjectCard";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import { useEffect, useState } from "react";
+import { motion } from "motion/react";
+import wave from "./assets/1f44b_color.png";
 
 const App = () => {
+	const [currentIndex, setCurrentIndex] = useState(0);
+	const [showGreetings, setShowGreetings] = useState(true);
+	const greetings = [
+		"Hello!",
+		"¡Hola!",
+		"Bonjour!",
+		"Ciao!",
+		"こんにちは!",
+		"Hallo!",
+		"नमस्ते!",
+	];
+
+	useEffect(() => {
+		const geetingTimer = setInterval(() => {
+			setCurrentIndex((prevIndex) =>
+				prevIndex === greetings.length - 1 ? 0 : prevIndex + 1
+			);
+		}, 250);
+
+		const pageTimer = setTimeout(() => {
+			setShowGreetings(false);
+			setCurrentIndex(0);
+		}, 2500);
+
+		return () => {
+			clearInterval(geetingTimer);
+			clearTimeout(pageTimer);
+		};
+	}, []);
+
+	if (showGreetings) {
+		return (
+			<div className="mesh">
+				<motion.div
+					initial={{ transform: "translateY(0)" }}
+					animate={{ transform: "translateY(-800px)" }}
+					transition={{ duration: 0.9, delay: 1.6 }}
+					className="mesh h-screen w-full flex justify-center items-center gap-2"
+				>
+					<img src={wave} className="w-20 h-20" />
+					<h1 className="text-6xl font-bold">
+						{greetings[currentIndex]}
+					</h1>
+				</motion.div>
+			</div>
+		);
+	}
 	return (
 		<main className="dark bg-background w-full overflow-hidden">
 			{/* home */}
